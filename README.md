@@ -39,8 +39,11 @@ The following table displays the expected MST weights as raw data depenedent on 
 
 # Growth Functions:
 For the 1-Dimension case, f(n) = 1.2. The tree size did not change as a function of n. Average tree sizes were about 1.2 for all values of n.
+
 For the 2-Dimension case, f(n) = 0.6831n0.4952. Average tree sizes increased as a function of n, but the rate of increase of the tree sizes with respect to n decreases as n increases. In other words, the second derivative is negative, consistent with this f(n) and our plots.
+
 For the 3-Dimension case, f(n) = 0.0.7126n0.6585. For the 3-Dimension case, average tree sizes increased as a function of n at a greater rate than in the 2-Dimension case. Again, tree size growth slowed (negative second derivative).
+
 For the 4-Dimension case, f(n) = 0.7837n0.7384. Tree size increased as a function of n at a still greater rate than in the 2-D and 3-D cases. Again, tree size growth slowed (negative second derivative).
 
 # Discussion: 
