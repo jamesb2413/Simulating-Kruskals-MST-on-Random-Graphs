@@ -2,17 +2,17 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-// connected and undirected graph
+// connected, undirected graph
 public class CUGraph {
 
     private final int n;
     public List<Edge> elst = new ArrayList<>();
     private Point[] points;
 
-    // Edge DS
     public static class Edge {
 
         private final double weight;
+        // vertices
         private final int v1id;
         private final int v2id;
 
@@ -112,6 +112,8 @@ public class CUGraph {
         elst.sort(new edgeCompare());
     }
 
+    // Pruning: Discards edges that are extremely unlikely to be chosen in MST 
+    // k(n) function to determine unlikely weight threshold estimated using small values of n for each dimension
     private double discardK(int n, int dim) {
         if (dim == 1) {
             return 2.7237 * Math.pow(n, -0.783);
@@ -147,7 +149,7 @@ public class CUGraph {
         }
     }
 
-    /*// string representation of graph adj list
+    // string representation of graph adjacency list
     public String toString() {
         StringBuilder s = new StringBuilder();
         if (dim == 1) {
@@ -200,7 +202,7 @@ public class CUGraph {
             s.append(eSort.get(e_n - 1).get_wt()).append("]\n");
         }
         return s.toString();
-    }*/
+    }
 
     public static void main(String[] args) {
         /* CUGraph one = new CUGraph(8, 1);
