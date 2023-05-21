@@ -48,6 +48,7 @@ For the 4-Dimension case, f(n) = 0.7837n0.7384. Tree size increased as a functio
 
 # Discussion: 
 The growth rates are not surprising if we reason about the computations. In the 1-D case, all edges have weight between zero and one with a normal distribution. As n increases, the average weights of individual edges in the MST go down because there are more edges in the distribution to choose from, but the number of edges in the MST goes up because there are more vertices to connect. These trends exactly cancel each other out, so the total weight of the MST stays constant on average.
+
 In the 2-D case, weights can be greater than the 1-D case, so the distribution of weights is skewed to be larger. As a result of this skew in weights, as n increases, the average weights of individual edges in the MST go down slower as the number of edges in the MST goes up, so the balance from 1-D is lost, and the total weight of the MST increases as a function of n. The slope of the increase decreases with n (negative 2nd derivative) because as n increases, then vertices get more concentrated in the unit square, so MSTs can be formed with smaller edges.
 The same reasoning follows for the 3-D and 4-D cases, but the slopes decrease slower because the spaces (unit cube and hypercube) are larger, so concentration of vertices has less of an effect.
 I trusted the pseudorandom number generator from the Java Math library and I did not notice any issues with it.
