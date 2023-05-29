@@ -13,7 +13,7 @@ unit cube (3 dimensions) and hypercube (4 dimensions). Again, the weight of an e
 * Point.java implements nodes within random graphs as points in 1, 2, 3, and 4 dimensions
 * CUGraph.java implements random graphs using lists of Points 
 * UF.java implements the Union Find algorithm for use within Kruskal's algorithm
-* MST.java finds a minimum spanning tree using Kruskal's or Prim's algorithm, although Kruskal's is more efficient due to pruning.
+* MST.java finds a minimum spanning tree using Kruskal's algorithm, which sorts all edges in increasing order by weight, then examining all edges in order, discarding any edges whose endpoints are both in the same tree. For all edges with endpoints in different trees, the two trees containing its endpoints are merged into the tree that will be eventually returned. Since our algorithm maintains a collection of disjoint sets of vertices in each tree, we use Union Find to determine the tree of each vertex and join trees when edges are added to our MST. Kruskal's is made more efficient here by pruning edges with sufficiently high weights such that they are very unlikely to be included in an MST, as estimated by simulating the algorithm on small trees.
 
 # Report
 The following plots simulate how the expected (average) weight of the minimum
