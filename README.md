@@ -15,6 +15,12 @@ unit cube (3 dimensions) and hypercube (4 dimensions). Again, the weight of an e
 * UF.java implements the Union Find algorithm for use within Kruskal's algorithm
 * MST.java finds a minimum spanning tree using Kruskal's algorithm, which sorts all edges in increasing order by weight, then examining all edges in order, discarding any edges whose endpoints are both in the same tree. For all edges with endpoints in different trees, the two trees containing its endpoints are merged into the tree that will be eventually returned. Since our algorithm maintains a collection of disjoint sets of vertices in each tree, we use Union Find to determine the tree of each vertex and join trees when edges are added to our MST. Kruskal's is made more efficient here by pruning edges with sufficiently high weights such that they are very unlikely to be included in an MST, as estimated by simulating the algorithm on small trees.
 
+To run your own simulation, after cloning this repo, compile using
+`javac MST.java`
+and run with 
+`java MST`
+The dimension and size of the simulated graph, as well as the number of simulations contributing to the average weight computation, can be modified in the `main()` method in MST.java.
+
 # Report
 The following plots simulate how the expected (average) weight of the minimum
 spanning tree returned by Kruskal's algorithm grows as a function of n. To do this, I implemented Kruskal's MST algorithm, as well as procedures to generate the random graphs.
