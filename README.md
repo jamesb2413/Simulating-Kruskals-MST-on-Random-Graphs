@@ -3,9 +3,9 @@ A project for Harvard's Data Structures and Algorithms course. Simulating Kruska
 
 I run simulations on three types of graphs:
 1. Complete graphs on n vertices, where the weight of each edge is a real number chosen uniformly at
-random on [0, 1].
+random on [0, 1] (1 dimension).
 2. Complete graphs on n vertices, where the vertices are points chosen uniformly at random inside the
-unit square. The weight of an edge is the Euclidean distance between its endpoints.
+unit square (2 dimensions). The weight of an edge is the Euclidean distance between its endpoints.
 3. Complete graphs on n vertices, where the vertices are points chosen uniformly at random inside the
 unit cube (3 dimensions) and hypercube (4 dimensions). Again, the weight of an edge is the Euclidean distance between its endpoints.
 
